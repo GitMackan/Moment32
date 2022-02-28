@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Moment32</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <a asp-controller="Home" asp-action="Index">
+                <h1>Marcus CDs</h1>
+            </a>
+        </div>
+        <!--Navigation-->
+        <nav>
+            <ul>
+                <li><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Hem</a></li>
+                <li><a class="nav-link text-dark" asp-area="" asp-controller="Record" asp-action="Index">CD-Skivor</a>
+                </li>
+                <li><a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">Om sidan</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Main-->
+    <main>
+        @RenderBody()
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div>
+            &copy; 2022 - Marcus Nygård - Moment32 - <a asp-area="" asp-controller="Home" asp-action="About">Om
+                sidan</a>
+        </div>
+    </footer>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

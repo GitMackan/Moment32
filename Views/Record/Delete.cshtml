@@ -1,0 +1,23 @@
+@model Moment32.Models.Record
+
+<body>
+    <div class="form-container">
+        <h3 class="delete-text">Är du säker på att du vill ta bort denna CD?</h3>
+        <div>
+            <h4>CD</h4>
+            <hr />
+            <div class="info">
+            <p>@Html.DisplayFor(model => model.RecordName)</p>
+            <p>@Html.DisplayFor(model => model.ArtistName)</p>
+            <p>@Html.DisplayFor(model => model.Genre!.GenreName)</p>
+            </div>
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Ta bort" class="deleteBtn" />
+                <div class="back"><a asp-action="Index">Tillbaka</a></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

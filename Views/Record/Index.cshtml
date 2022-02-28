@@ -1,0 +1,43 @@
+@model IEnumerable<Moment32.Models.Record>
+
+@{
+    ViewData["Title"] = "Records";
+}
+
+<body>
+    <div class="record-container">
+        <table class="record-table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.RecordName)</th>
+                    <th>@Html.DisplayNameFor(model => model.ArtistName)</th>
+                    <th>@Html.DisplayNameFor(model => model.GenreId)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.RecordName)</td>
+                            <td>@Html.DisplayFor(modelItem => item.ArtistName)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Genre!.GenreName)</td>
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id">Ändra</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id">Detaljer</a> |
+                                <a asp-action="Delete" asp-route-id="@item.Id">Ta bort</a>
+                            </td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+        <p>
+            <div class="delete"><a asp-action="Create">Lägg till en CD</a></div>
+        </p>
+    </div>
+</body>
+
+</html>

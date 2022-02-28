@@ -1,0 +1,18 @@
+@model Moment32.Models.Genre
+
+<body>
+    <div class="form-container">
+        <h4>Genre</h4>
+        <hr />
+        <div class="info">
+            <p>Genre -
+                @Html.DisplayFor(model => model.GenreName)</p>
+        </div>
+        <div>
+            <div class="delete"><a asp-action="Edit" asp-route-id="@Model?.Id">Ändra</a></div>
+            <div class="back"><a asp-action="Index">Tillbaka</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

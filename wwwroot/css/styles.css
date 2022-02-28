@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* Header */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1em;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(1, 1, 126);
+}
+
+.logo {
+    font-size: 1em;
+    color: black;
+    display: flex;
+    align-items: center;
+    width: 20%;
+}
+
+.logo a {
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    width: 30%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* MAIN */
+
+main {
+    display: grid;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10vh 1em 10vh 1em;
+    background: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Index */
+
+.home-container {
+    width: 60%;
+    border: 1px solid black;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    margin: 0 auto;
+    padding: 4em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.home-container h2 {
+    margin-bottom: 1em;
+}
+
+.home-container p {
+    width: 85%;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    letter-spacing: .02em;
+    color: black;
+}
+
+.home-container img {
+    max-width: 60%;
+    height: auto;
+}
+
+.userBtn {
+    width: 50%;
+    background: rgb(1, 1, 126);
+    color: rgb(228, 228, 255);
+    cursor: pointer;
+}
+
+
+/* Records */
+
+.record-container {
+    background: rgb(255, 255, 255);
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 4em;
+    min-height: 80vh;
+}
+
+.record-container h2 {
+    text-align: center;
+    margin-bottom: 2em;
+    text-transform: uppercase;
+}
+
+
+/* Add record */
+
+.form-container {
+    background: rgb(255, 255, 255);
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 4em;
+}
+
+.form-container h2,
+.form-container h3 {
+    margin-bottom: 2em;
+}
+
+form {
+    width: 60%;
+    margin-top: 1em;
+}
+
+form label {
+    width: 50%;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: 600;
+}
+
+form input {
+    height: 3em;
+    width: 100%;
+    font-size: 1em;
+    padding-left: 1em;
+    background: rgb(252, 252, 252);
+}
+
+.form-text {
+    width: 60%;
+}
+
+form span {
+    margin-bottom: 2em;
+}
+
+.back {
+    margin-top: 2em;
+}
+
+.back a {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+.back a:hover {
+    text-decoration: under;
+}
+
+.addBtn {
+    width: 50%;
+    margin: 0 auto;
+    background: rgb(19, 19, 59);
+    color: rgb(228, 228, 255);
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.deleteBtn {
+    width: 50%;
+    margin: 0 auto;
+    background: rgb(197, 0, 0);
+    color: rgb(228, 228, 255);
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.delete-text {
+    color: red;
+    font-size: 1.5em;
+}
+
+.addBtn:hover {
+    text-decoration: under;
+}
+
+.errorMsg {
+    color: red;
+    text-transform: uppercase;
+    font-size: .8em;
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+form select {
+    width: 100px;
+    height: 3em;
+    font-size: 1em;
+    padding-left: 1em;
+    margin-bottom: 2em;
+}
+
+.checkBox {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.checkBox input {
+    height: 2em;
+}
+
+
+/* Delete */
+
+.info {
+    margin-top: 1em;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.info p {
+    margin-bottom: .5em;
+}
+
+.delete {
+    border: 1px solid blue;
+    width: 40%;
+    background: rgb(19, 19, 59);
+    cursor: pointer;
+    margin-top: 1em;
+    height: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete a {
+    color: rgb(228, 228, 255);
+    text-decoration: none;
+}
+
+
+/* Edit */
+
+.record-table {
+    border-collapse: collapse;
+    font-size: 0.9em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.record-table thead tr {
+    background-color: rgb(19, 19, 59);
+    color: #fff;
+    text-align: left;
+}
+
+.record-table th,
+.record-table td {
+    padding: 1em 2em;
+}
+
+.record-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.record-table tbody tr:nth-of-type(even) {
+    background-color: #e6e2f8;
+}
+
+.record-table tbody tr:last-of-type {
+    border-bottom: 2px solid #1b1138;
+}
+
+.record-table a {
+    text-decoration: none;
+    color: rgb(24, 25, 70);
+}
+
+.record-table a:hover {
+    text-decoration: underline;
+}
+
+
+/* Contact */
+
+.contact-container {
+    background: rgb(255, 255, 255);
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 4em;
+    min-height: 60vh;
+}
+
+
+/* Footer */
+
+footer {
+    color: rgb(1, 1, 126);
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    padding: 2em;
+    align-items: center;
+    font-weight: 600;
+}
+
+.footer-text {
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+.footer-info {
+    font-size: 1.5em;
+}
+
+.socials i {
+    font-size: 3em;
+    color: rgb(1, 1, 126);
+}
+
+
+/* Media Queries */
+
+@media all and (max-width: 1450px) {
+    header {
+        flex-direction: column;
+    }
+    nav,
+    .logo {
+        width: 100%;
+    }
+    .logo {
+        justify-content: center;
+    }
+    .form-container {
+        background: rgb(255, 255, 255);
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 20px;
+        padding: 4em;
+    }
+    footer {
+        flex-direction: column;
+    }
+    .footer-info,
+    .footer-text {
+        margin-bottom: 1em;
+    }
+    .footer-text i {
+        display: none;
+    }
+    .userBtn {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 1150px) {
+    .form-container,
+    .home-container,
+    .record-container,
+    .contact-container {
+        width: 80%;
+    }
+    form {
+        width: 100%;
+    }
+    .contact_partial {
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .form-container,
+    .home-container,
+    .record-container,
+    .contact-container {
+        width: 100%;
+    }
+    .home-container {
+        grid-template-columns: 1fr;
+    }
+    .home-container p {
+        width: 100%;
+    }
+    .logo {
+        margin: 1em 0 2em 0;
+    }
+    table {
+        width: 100%;
+    }
+    .record-container {
+        padding: 0 0;
+    }
+    .record-table th,
+    .record-table td {
+        padding: 1em 0;
+    }
+}

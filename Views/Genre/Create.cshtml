@@ -1,0 +1,21 @@
+@model Moment32.Models.Genre
+
+<body>
+    <div class="form-container">
+        <h4>Genre</h4>
+        <hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="errorMsg"></div>
+            <label asp-for="GenreName"></label>
+            <input asp-for="GenreName" />
+            <div class="error-container"><span asp-validation-for="GenreName" class="errorMsg"></span></div>
+            <input type="submit" value="Lägg till" class="addBtn" />
+        </form>
+
+        <div>
+            <div class="back"><a asp-action="Index">Tillbaka</a></div>
+        </div>
+    </div>
+</body>
+
+</html>

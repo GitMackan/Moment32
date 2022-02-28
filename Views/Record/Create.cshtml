@@ -1,0 +1,36 @@
+@model Moment32.Models.Record
+
+<body>
+    <div class="form-container">
+        <h4>Lägg till CD</h4>
+        <hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="errorMsg"></div>
+
+            <label asp-for="RecordName"></label>
+            <input asp-for="RecordName" />
+            <div class="error-container"><span asp-validation-for="RecordName" class="errorMsg"></span></div>
+            <br>
+
+            <label asp-for="ArtistName"></label>
+            <input asp-for="ArtistName" />
+            <div class="error-container"><span asp-validation-for="ArtistName" class="errorMsg"></span></div>
+            <br>
+
+            <label asp-for="GenreId"></label>
+            <br>
+            <select asp-for="GenreId" asp-items="ViewBag.GenreId"></select>
+            <span asp-validation-for="GenreId" class="errorMsg"></span>
+            
+            <p class="form-text">Finns inte den genre du söker i listan?</p>
+            <p class="form-text">Klicka <a asp-controller="Genre" asp-action="Create">här</a> för att lägga till den till
+            listan.</p>
+            <input type="submit" value="Lägg till" class="addBtn" />
+        </form>
+        
+
+        <div class="back"><a asp-action="Index">Tillbaka</a></div>
+    </div>
+</body>
+
+</html>

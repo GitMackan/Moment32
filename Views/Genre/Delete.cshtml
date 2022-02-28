@@ -1,0 +1,19 @@
+@model Moment32.Models.Genre
+
+<body>
+    <div class="form-container">
+        <h3 class="delete-text">Är du säker på att du vill ta bort denna genre?</h3>
+        <div>
+            <h4>Genre</h4>
+            <hr /><br>
+            <p>@Html.DisplayFor(model => model.GenreName)</p>
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <input type="submit" value="Ta bort" class="deleteBtn" />
+                <div class="back"><a asp-action="Index">Tillbaka</a></div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
